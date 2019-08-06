@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			.body{
+				position: fixed;
+				top:0px;
+				left:0px;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 26px;
+				color: #999;
+			}
+			
+			#xin{
+				width: 0px;
+				height:0px;
+				z-index: 9999;
+			}
+			.xin-item{
+				position: fixed;
+				width: 20px;
+				height: 20px;
+				font-size: 20px;
+				margin:0px;
+				animation: xin-item 0.8s;
+			}
+			@keyframes xin-item{
+				from{
+					transform: translate(-50%, -50%) scale(1);
+					opacity: 0.8;
+				}
+				to{
+					transform: translate(-50%, -400%) scale(1.6);
+					opacity: 0.1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="xin"></div>
+		<p class="body">点我试试哦</p>
+	</body>
+</html>
+<script src="xin.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	xinInit({
+		type:"touch", //可传值 "click","touch"
+		time:100,//当type为touch 时创建心形的间隔时间 单位毫秒
+	})
+</script>
